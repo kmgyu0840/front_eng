@@ -134,7 +134,7 @@ export default function DrawerContent({ anchor, toggleDrawer }) {
               <ListItemIcon>
                 <SimCardAlertOutlinedIcon />
               </ListItemIcon>
-              <ListItemText primary="독소조항" />
+              <ListItemText primary="독소조항 추출" />
             </ListItemButton>
             <ListItemButton sx={{ pl: 4 }}>
               <ListItemIcon>

@@ -23,8 +23,7 @@ export default function Main() {
         sx={{
           backgroundImage: 'url(/bg6.jpg)',
           backgroundRepeat: 'no-repeat',
-          backgroundColor: (t) =>
-            t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+          backgroundColor: t => t.palette.grey[50],
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
