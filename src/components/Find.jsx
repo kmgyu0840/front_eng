@@ -20,9 +20,11 @@ export default function Find() {
   const dispatch = useDispatch();
   
   
-  const emailError = useSelector(state => state.emailError);
-  const nameError = useSelector(state => state.nameError);
-  const phoneError = useSelector(state => state.phoneError);
+  const findPwEmailError = useSelector(state => state.findPwEmailError);
+  const findEmailNameError = useSelector(state => state.findEmailNameError);
+  const findPwNameError = useSelector(state => state.findPwNameError);
+  const findEmailphoneError = useSelector(state => state.findEmailphoneError);
+  const findPwphoneError = useSelector(state => state.findPwphoneError);
 
   const findEmailButtonStatus = useSelector(state => state.findEmailButtonStatus);
   const findPwButtonStatus = useSelector(state => state.findPwButtonStatus);
@@ -34,7 +36,10 @@ export default function Find() {
   const findPwResult = useSelector(state => state.findPwResult);
 
   
-  const { handleEmailValidation, handleNameValidation, handlePhoneValidation, handleDateChange } = HandleValidationHook({});
+  const { handleFindPwEmailValidation,
+    handleFindEmailNameValidation, handleFindPwNameValidation,
+    handleFindEmailPhoneValidation, handleFindPwPhoneValidation, 
+    handleFindEmailDateChange, handleFindPwDateChange } = HandleValidationHook({});
   const { onClickFindEmailButton, onClickFindPwButton } = FindAPI({});
   
 
@@ -86,19 +91,19 @@ export default function Find() {
             <TabPanel value="1">
               <Box component="form" noValidate sx={{ maxWidth: '50ch' }}>
                 <TextField
-                  error={nameError}
+                  error={findEmailNameError}
                   placeholder="한/영 2~20자"
                   // helperText={nameError ? "올바른 이름을 입력해주세요." : ""}
-                  onChange={handleNameValidation}
+                  onChange={handleFindEmailNameValidation}
                   margin="normal"
                   fullWidth
                   label="이름"
                 />
                 <TextField
-                  error={phoneError}
+                  error={findEmailphoneError}
                   placeholder=" -(하이픈) 없이 입력"
                   // helperText={phoneError ? " - 없이 입력해주세요." : ""}
-                  onChange={handlePhoneValidation}
+                  onChange={handleFindEmailPhoneValidation}
                   margin="normal"
                   fullWidth
                   label="전화번호"
@@ -109,7 +114,7 @@ export default function Find() {
                       <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DesktopDatePicker
                           label = "생년월일"
-                          onChange={handleDateChange}
+                          onChange={handleFindEmailDateChange}
                         />
                       </LocalizationProvider>
                     </Box>
@@ -161,28 +166,28 @@ export default function Find() {
             <TabPanel value="2">
               <Box component="form" noValidate sx={{ maxWidth: '50ch' }}>
                 <TextField
-                  error={emailError}
+                  error={findPwEmailError}
                   placeholder="example@wise.co.kr"
-                  // helperText={emailError ? "올바른 이메일 주소를 입력해주세요." : ""}
-                  onChange={handleEmailValidation}
+                  // helperText={findPwEmailError ? "올바른 이메일 주소를 입력해주세요." : ""}
+                  onChange={handleFindPwEmailValidation}
                   margin="normal"
                   fullWidth
                   label="이메일"
                 />
                 <TextField
-                  error={nameError}
+                  error={findPwNameError}
                   placeholder="한/영 2~20자"
                   // helperText={nameError ? "올바른 이름을 입력해주세요." : ""}
-                  onChange={handleNameValidation}
+                  onChange={handleFindPwNameValidation}
                   margin="normal"
                   fullWidth
                   label="이름"
                 />
                 <TextField
-                  error={phoneError}
+                  error={findPwphoneError}
                   placeholder=" -(하이픈) 없이 입력"
                   // helperText={phoneError ? " - 없이 입력해주세요." : ""}
-                  onChange={handlePhoneValidation}
+                  onChange={handleFindPwPhoneValidation}
                   margin="normal"
                   fullWidth
                   label="전화번호"
@@ -195,7 +200,7 @@ export default function Find() {
                       <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DesktopDatePicker
                           label = "생년월일"
-                          onChange={handleDateChange}
+                          onChange={handleFindPwDateChange}
                         />
                       </LocalizationProvider>
                     </Box>

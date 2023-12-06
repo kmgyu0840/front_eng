@@ -42,10 +42,10 @@ const AppBarContent = ({ toggleDrawer }) => {
         <Box>
           <Tooltip title="더보기">
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Avatar sx={{ bgcolor: green[300], width: 30, height: 30 }}> D </Avatar>
               <IconButton onClick={handleClick}>
-                <Typography color="white" size="large" >{Object.keys(userName).length !== 0 ? userName.result.name : ""} 님</Typography>
+                <Typography color="white" size="large" > 안녕하세요. {Object.keys(userName).length !== 0 ? userName.result.name : ""} 님</Typography>
               </IconButton>
+              <Avatar sx={{ bgcolor: green[300], width: 30, height: 30 }}> D </Avatar>
             </Box>
           </Tooltip>
           <Menu

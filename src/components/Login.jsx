@@ -14,12 +14,12 @@ export default function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const emailError = useSelector(state => state.emailError);
-  const pwError = useSelector(state => state.pwError);
+  const loginEmailError = useSelector(state => state.loginEmailError);
+  const loginPwError = useSelector(state => state.loginPwError);
   const loginButtonStatus = useSelector(state => state.loginButtonStatus);
   const loginAlert = useSelector(state => state.loginAlert);
 
-  const { handleEmailValidation, handlePwValidation } = HandleValidationHook({});
+  const { handleLoginEmailValidation, handleLoginPwValidation } = HandleValidationHook({});
   const { onClickLoginButton } = loginAPI({});
 
   
@@ -46,10 +46,10 @@ export default function Login() {
 
         <Box sx={{ mt: 1, maxWidth: '50ch' }}>
           <TextField
-            error={emailError}
+            error={loginEmailError}
             placeholder="example@wise.co.kr"
             // helperText={emailError ? "올바른 이메일 주소를 입력해주세요." : ""}
-            onChange={handleEmailValidation}
+            onChange={handleLoginEmailValidation}
             margin="normal"
             fullWidth
             id="email"
@@ -59,10 +59,10 @@ export default function Login() {
             autoFocus
           />
           <TextField
-            error={pwError}
+            error={loginPwError}
             placeholder="영문, 숫자, 특수문자 포함 8자 이상"
             // helperText={pwError ? "영문, 숫자, 특수문자 포함 8자 이상 입력해주세요." : ""}
-            onChange={handlePwValidation}
+            onChange={handleLoginPwValidation}
             margin="normal"
             fullWidth
             name="password"

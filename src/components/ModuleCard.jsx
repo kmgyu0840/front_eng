@@ -10,34 +10,31 @@ import { BrowserUpdatedOutlined as BrowserUpdatedOutlinedIcon, FilterDrama as Fi
 
 export default function ModuleCard() {
   return (
-
-    <Box
-      sx={{
-        marginTop: 3,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}
-    >
-
-      <Box sx={{ position: 'relative', height:'10%' }}>
-        <CardMedia
-          component="img"
-          image={`${process.env.PUBLIC_URL}/home6.png`}
-          alt="No"
-        >
-        </CardMedia>
-        <Typography variant="h4" component="h1" sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white' }}>
-          탄소 저감 모델 연계 디지털 엔지니어링 설계 기술 개발
+    <Box>
+      <Grid
+        item
+        xs={false}
+        sm={false}
+        md={12}
+        sx={{
+          position: 'relative',
+          height: '35vh',
+          backgroundImage: 'url(/home6.png)',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <Typography variant="h4" component="h1" sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white', whitespace: 'nowrap' }}>
+          디지털 변환
         </Typography>
-      </Box>
+      </Grid>
 
-      <Container sx={{ py: 6 }}>
-        <Grid container spacing={2}>
+      <Grid item xs={12} sm={12} md={12}>
+        <Container maxWidth="xl" sx={{ mt: 8, mb: 2 }}>
+          <Grid container spacing={3}>
             <Grid item xs={12} sm={6} md={4}>
-              <Card
-                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-              >
+              <Card>
                 <CardMedia
                   component="div"
                   sx={{
@@ -55,22 +52,19 @@ export default function ModuleCard() {
                 </CardContent>
                 <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                   <Tooltip title="모듈 설치">
-                    <Button size="small"> <BrowserUpdatedOutlinedIcon /> </Button>
-                  </Tooltip>
-                  <Tooltip title="데이터 관리">
-                    <Button size="small"> <FilterDramaIcon /> </Button>
-                  </Tooltip>
-                  <Tooltip title="시각화">
-                    <Button size="small"> <InsertChartOutlinedRoundedIcon /> </Button>
-                  </Tooltip>
-                </CardActions>
+                      <Button size="small"> <BrowserUpdatedOutlinedIcon /> </Button>
+                    </Tooltip>
+                    <Tooltip title="데이터 관리">
+                      <Button size="small"> <FilterDramaIcon /> </Button>
+                    </Tooltip>
+                    <Tooltip title="시각화">
+                      <Button size="small"> <InsertChartOutlinedRoundedIcon /> </Button>
+                    </Tooltip>
+                  </CardActions>
               </Card>
             </Grid>
-
             <Grid item xs={12} sm={6} md={4}>
-              <Card
-                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-              >
+              <Card sx={{}}>
                 <CardMedia
                   component="div"
                   sx={{
@@ -88,22 +82,19 @@ export default function ModuleCard() {
                 </CardContent>
                 <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                   <Tooltip title="모듈 설치">
-                    <Button size="small"> <BrowserUpdatedOutlinedIcon /> </Button>
-                  </Tooltip>
-                  <Tooltip title="데이터 관리">
-                    <Button size="small"> <FilterDramaIcon /> </Button>
-                  </Tooltip>
-                  <Tooltip title="시각화">
-                    <Button size="small"> <InsertChartOutlinedRoundedIcon /> </Button>
-                  </Tooltip>
-                </CardActions>
+                      <Button size="small"> <BrowserUpdatedOutlinedIcon /> </Button>
+                    </Tooltip>
+                    <Tooltip title="데이터 관리">
+                      <Button size="small"> <FilterDramaIcon /> </Button>
+                    </Tooltip>
+                    <Tooltip title="시각화">
+                      <Button size="small"> <InsertChartOutlinedRoundedIcon /> </Button>
+                    </Tooltip>
+                  </CardActions>
               </Card>
             </Grid>
-
             <Grid item xs={12} sm={6} md={4}>
-              <Card
-                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-              >
+              <Card sx={{}}>
                 <CardMedia
                   component="div"
                   sx={{
@@ -121,25 +112,23 @@ export default function ModuleCard() {
                 </CardContent>
                 <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                   <Tooltip title="타공정 검증">
-                    <Button size="small"> <CompareArrowsOutlinedIcon /> </Button>
-                  </Tooltip>
-                  <Tooltip title="독소조항 추출">
-                    <Button size="small"> <SimCardAlertOutlinedIcon /> </Button>
-                  </Tooltip>
-                  <Tooltip title="데이터 관리">
-                    <Button size="small"> <FilterDramaIcon /> </Button>
-                  </Tooltip>
-                  <Tooltip title="시각화">
-                    <Button size="small"> <InsertChartOutlinedRoundedIcon /> </Button>
-                  </Tooltip>
-                </CardActions>
+                      <Button size="small"> <CompareArrowsOutlinedIcon /> </Button>
+                    </Tooltip>
+                    <Tooltip title="독소조항 추출">
+                      <Button size="small"> <SimCardAlertOutlinedIcon /> </Button>
+                    </Tooltip>
+                    <Tooltip title="데이터 관리">
+                      <Button size="small"> <FilterDramaIcon /> </Button>
+                    </Tooltip>
+                    <Tooltip title="시각화">
+                      <Button size="small"> <InsertChartOutlinedRoundedIcon /> </Button>
+                    </Tooltip>
+                  </CardActions>
               </Card>
             </Grid>
-
-
-        </Grid>
-      </Container>
-
+          </Grid>
+        </Container>
+      </Grid>
     </Box>
   );
 };

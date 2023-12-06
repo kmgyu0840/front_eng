@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Box, CssBaseline, Drawer } from '@mui/material';
+import { CssBaseline, Drawer, Grid } from '@mui/material';
 import DrawerContent from '../components/DrawerContent.jsx';
 import AppBarContent from '../components/AppBarContent.jsx';
-import ModuleCard from '../components/ModuleCard.jsx';
 import Footer from "../components/Footer.jsx"
+import ModuleCard from '../components/ModuleCard.jsx';
 
 
 export default function Module() {
@@ -15,9 +15,14 @@ export default function Module() {
   };
 
   return (
-    <Box sx={{ display: 'flex',  flexDirection: 'column'  }}>
-
-      <CssBaseline />
+    <Grid
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh',
+      }}
+    >
+      <CssBaseline/>
       <AppBarContent toggleDrawer={toggleDrawer} />
       <Drawer
         anchor="left"
@@ -27,18 +32,10 @@ export default function Module() {
         <DrawerContent anchor="left" toggleDrawer={toggleDrawer} />
       </Drawer>
 
-      <Box
-        component="main"
-        sx={{
-          backgroundColor: t => t.palette.grey[50],
-        }}
-      >
+      <ModuleCard />
 
-        <ModuleCard/>
-        <Footer/>
+      <Footer />
 
-      </Box>
-
-    </Box>
+    </Grid>
   );
 }

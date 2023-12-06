@@ -518,6 +518,7 @@ export default function SignPolicy() {
       <Box
         sx={{
           marginTop: 8,
+          mx: 4,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',

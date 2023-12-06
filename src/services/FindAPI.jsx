@@ -8,10 +8,13 @@ export default function FindAPI() {
 
   const dispatch = useDispatch();
 
-  const email = useSelector(state => state.email);
-  const name = useSelector(state => state.name);
-  const phone = useSelector(state => state.phone);
-  const birth = useSelector(state => state.birth);
+  const findPwEmail = useSelector(state => state.findPwEmail);
+  const findEmailName = useSelector(state => state.findEmailName);
+  const findPwName = useSelector(state => state.findPwName);
+  const findEmailPhone = useSelector(state => state.findEmailPhone);
+  const findPwPhone = useSelector(state => state.findPwPhone);
+  const findEmailBirth = useSelector(state => state.findEmailBirth);
+  const findPwBirth = useSelector(state => state.findPwBirth);
 
 
   //email 찾기
@@ -19,9 +22,9 @@ export default function FindAPI() {
 
 
     const findEmailInfo = {
-      'name': name,
-      'phone': phone,
-      'birth': birth,
+      'name': findEmailName,
+      'phone': findPwPhone,
+      'birth': findEmailBirth,
     };
     
     try {
@@ -51,10 +54,10 @@ export default function FindAPI() {
   const onClickFindPwButton = async () => {
 
     const findPwInfo = {
-      'username': email,
-      'name': name,
-      'phone': phone,
-      'birth': birth,
+      'username': findPwEmail,
+      'name': findPwName,
+      'phone': findEmailPhone,
+      'birth': findPwBirth,
     };
 
     try {
