@@ -6,7 +6,7 @@ import phoneReducer from './phoneReducer';
 import birthReducer from './birthReducer';
 import buttonStatusReducer from './buttonStatusReducer';
 import alertReducer from './alertReducer';
-import readOnlyStatusReducer from './readOnlyStatsReducer';
+import readOnlyStatusReducer from './readOnlyStatusReducer';
 import resultReducer from './resultReducer';
 import authCodeReducer from './authKeyReducer';
 import orgReducer from './orgReducer';
