@@ -7,8 +7,12 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box, Container, Grid, Tooltip } from '@mui/material';
 import { BrowserUpdatedOutlined as BrowserUpdatedOutlinedIcon, FilterDrama as FilterDramaIcon, InsertChartOutlinedRounded as InsertChartOutlinedRoundedIcon, CompareArrowsOutlined as CompareArrowsOutlinedIcon, SimCardAlertOutlined as SimCardAlertOutlinedIcon } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 export default function ModuleCard() {
+
+  const navigate = useNavigate();
+
   return (
     <Box>
       <Grid
@@ -52,7 +56,7 @@ export default function ModuleCard() {
                 </CardContent>
                 <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                   <Tooltip title="모듈 설치">
-                      <Button size="small"> <BrowserUpdatedOutlinedIcon /> </Button>
+                      <Button size="small" onClick={()=>{ navigate('/module/drawdownload')}}> <BrowserUpdatedOutlinedIcon /> </Button>
                     </Tooltip>
                     <Tooltip title="데이터 관리">
                       <Button size="small"> <FilterDramaIcon /> </Button>

@@ -60,7 +60,7 @@ export default function DrawerContent({ anchor, toggleDrawer }) {
         </ListItemButton>
         <Collapse in={openMenu.도면} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 4 }}>
+            <ListItemButton sx={{ pl: 4 }} onClick={()=>{ navigate('/module/drawdownload')}}>
               <ListItemIcon>
                 <BrowserUpdatedOutlinedIcon />
               </ListItemIcon>
