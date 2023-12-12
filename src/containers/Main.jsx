@@ -21,7 +21,7 @@ export default function Main() {
         sm={4}
         md={7}
         sx={{
-          backgroundImage: 'url(/bg6.jpg)',
+          backgroundImage: 'url(/main.jpg)',
           backgroundRepeat: 'no-repeat',
           backgroundColor: t => t.palette.grey[50],
           backgroundSize: 'cover',

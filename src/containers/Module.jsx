@@ -4,8 +4,9 @@ import { Route, Routes } from 'react-router-dom';
 import DrawerContent from '../components/DrawerContent.jsx';
 import AppBarContent from '../components/AppBarContent.jsx';
 import ModuleCard from '../components/ModuleCard.jsx';
-import DrawDownload from '../components/DrawDownload.jsx'
-import Footer from "../components/Footer.jsx"
+import MyPage from  '../components/MyPage.jsx';
+import Download from '../components/Download.jsx';
+import Footer from "../components/Footer.jsx";
 
 
 export default function Module() {
@@ -36,7 +37,9 @@ export default function Module() {
 
       <Routes>
         <Route path="/" element={<ModuleCard />} />
-        <Route path="/drawdownload" element={<DrawDownload />} />
+        <Route path="/mypage" element={<MyPage />} />
+        <Route path="/drawdownload" element={<Download />} />
+        <Route path="/sheetdownload" element={<Download />} />
       </Routes>
 
       <Footer />
