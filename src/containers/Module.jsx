@@ -6,6 +6,7 @@ import AppBarContent from '../components/AppBarContent.jsx';
 import ModuleCard from '../components/ModuleCard.jsx';
 import MyPage from  '../components/MyPage.jsx';
 import Download from '../components/Download.jsx';
+import Cloud  from './Cloud.jsx';
 import Footer from "../components/Footer.jsx";
 
 
@@ -40,6 +41,9 @@ export default function Module() {
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/drawdownload" element={<Download />} />
         <Route path="/sheetdownload" element={<Download />} />
+        <Route path="/drawcloud" element={<Cloud />} />
+        <Route path="/sheetcloud" element={<Cloud />} />
+        <Route path="/doccloud" element={<Cloud />} />
       </Routes>
 
       <Footer />
