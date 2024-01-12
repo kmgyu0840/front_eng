@@ -9,7 +9,7 @@ import { Box, Container, Grid, Tooltip } from '@mui/material';
 import { BrowserUpdatedOutlined as BrowserUpdatedOutlinedIcon, FilterDrama as FilterDramaIcon, InsertChartOutlinedRounded as InsertChartOutlinedRoundedIcon, CompareArrowsOutlined as CompareArrowsOutlinedIcon, SimCardAlertOutlined as SimCardAlertOutlinedIcon } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { setCurrentPath } from '../actions';
+import { setCurrentPath, setVisualDrawImg } from '../actions';
 
 
 export default function ModuleCard() {
@@ -64,7 +64,7 @@ export default function ModuleCard() {
                     <Button size="small" onClick={()=>{ dispatch(setCurrentPath('draw/')); navigate('/module/drawcloud'); }}> <FilterDramaIcon /> </Button>
                   </Tooltip>
                   <Tooltip title="시각화">
-                    <Button size="small"> <InsertChartOutlinedRoundedIcon /> </Button>
+                    <Button size="small" onClick={()=>{ dispatch(setCurrentPath('draw/')); dispatch(setVisualDrawImg(null)); navigate('/module/drawvisual'); }}> <InsertChartOutlinedRoundedIcon /> </Button>
                   </Tooltip>
                 </CardActions>
               </Card>

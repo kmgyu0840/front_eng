@@ -7,6 +7,7 @@ import ModuleCard from '../components/ModuleCard.jsx';
 import MyPage from  '../components/MyPage.jsx';
 import Download from '../components/Download.jsx';
 import Cloud  from './Cloud.jsx';
+import Visual  from './Visual.jsx';
 import Administrator from './Administrator.jsx';
 import Footer from "../components/Footer.jsx";
 import { useSelector } from 'react-redux';
@@ -52,6 +53,7 @@ export default function Module() {
         <Route path="/drawcloud" element={<Cloud />} />
         <Route path="/sheetcloud" element={<Cloud />} />
         <Route path="/doccloud" element={<Cloud />} />
+        <Route path="/drawvisual" element={<Visual />} />
         <Route path="/admin" element={
           <RedirectToHomeIfNotAdmin>
             <Administrator />

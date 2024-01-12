@@ -3,7 +3,7 @@ import { Box, List, Divider, ListItem, ListItemButton, ListItemIcon, ListItemTex
 import { ChevronLeft as ChevronLeftIcon, Home as HomeIcon, ShapeLineOutlined as ShapeLineOutlinedIcon, BrowserUpdatedOutlined as BrowserUpdatedOutlinedIcon, FilterDrama as FilterDramaIcon, InsertChartOutlinedRounded as InsertChartOutlinedRoundedIcon, GridOn as GridOnIcon, DescriptionOutlined as DescriptionOutlinedIcon, CompareArrowsOutlined as CompareArrowsOutlinedIcon, SimCardAlertOutlined as SimCardAlertOutlinedIcon, ExpandLess, ExpandMore } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { setCurrentPath } from '../actions';
+import { setCurrentPath, setVisualDrawImg } from '../actions';
 
 export default function DrawerContent({ anchor, toggleDrawer }) {
 
@@ -76,7 +76,7 @@ export default function DrawerContent({ anchor, toggleDrawer }) {
               </ListItemIcon>
               <ListItemText primary="데이터 관리" />
             </ListItemButton>
-            <ListItemButton sx={{ pl: 4 }}>
+            <ListItemButton sx={{ pl: 4 }} onClick={()=>{ dispatch(setCurrentPath('draw/')); dispatch(setVisualDrawImg(null)); navigate('/module/drawvisual'); }}>
               <ListItemIcon>
                 <InsertChartOutlinedRoundedIcon />
               </ListItemIcon>
