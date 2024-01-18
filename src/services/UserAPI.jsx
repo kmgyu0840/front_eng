@@ -161,6 +161,19 @@ export default function UserAPI() {
     }
 
   }
+  
+  const onClickKist = async () => {
+    try {
+      const response= await axios.post('/go-doc')
 
-  return { logOutButton, onClickChangePhoneButton, onClickChangePwButton, onClickDeactivateUser };
+      if(response.status === 200) {
+        let session = response.data.result.session;
+        window.location.href = `http://125.131.72.225:18180/slogin/${session}`;
+      }
+    } catch(error) {
+      console.error(error);
+    }
+  };
+
+  return { logOutButton, onClickChangePhoneButton, onClickChangePwButton, onClickDeactivateUser, onClickKist };
 };
